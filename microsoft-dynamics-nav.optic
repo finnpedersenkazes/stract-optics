@@ -1,0 +1,6 @@
+DiscardNonMatching;
+Rule {
+    Matches {
+        Url("|https://learn.microsoft.com/en-us/dynamics-nav/")
+    }
+};
