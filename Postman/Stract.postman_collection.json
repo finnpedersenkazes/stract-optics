@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "4dd8c364-18bb-4196-9113-6f01724ce6c1",
+		"name": "Stract",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3545428"
+	},
+	"item": [
+		{
+			"name": "SearchBC",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": \"findfirst\",\n  \"optic\": \"DiscardNonMatching;Rule {Matches{Url(\\\"|https://learn.microsoft.com/en-us/dynamics365/business-central\\\")}};\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/beta/api/search",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"beta",
+						"api",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchNAV",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": \"findfirst\",\n  \"optic\": \"DiscardNonMatching;Rule {Matches{Url(\\\"|https://learn.microsoft.com/en-us/dynamics-nav\\\")}};\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/beta/api/search",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"beta",
+						"api",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search dr.dk",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": \"rumstation\",\n  \"optic\": \"DiscardNonMatching;Rule {Matches{Url(\\\"|https://www.dr.dk\\\")}};\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/beta/api/search",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"beta",
+						"api",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://trystract.com",
+			"type": "string"
+		}
+	]
+}
